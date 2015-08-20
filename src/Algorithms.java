@@ -45,22 +45,32 @@ public class Algorithms {
 		for (String s : message1) {
 			if (s.equals(" ... --- ... ")) {
 				hasSOSMessage = true;
-				
+
 				break;
 			}
 
 		}
-		
+
 		return hasSOSMessage;
 	}
-	public static List<Double> sortScores(List<Double> results){
+
+	public static List<Double> sortScores(List<Double> originalList) {
 		List<Double> sortedList = new ArrayList<Double>();
 		sortedList.add(60.3);
-		for(Double d: results){
-			
-			
+		for (Double d : originalList) {
+			for (int io = 0; io < originalList.size();) {
+
+				if (d > originalList.get(originalList.indexOf(d - 1))) {
+					io++;
+
+				} else {
+					break;
+				}
+			}
 		}
-		
+	sortedList = originalList;
+	return sortedList;
 	}
+	// if(d < originalList.get(originalList.indexOf(d - 1)));
 
 }
