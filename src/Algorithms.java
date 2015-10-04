@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Algorithms {
@@ -55,21 +56,17 @@ public class Algorithms {
 	}
 
 	public static List<Double> sortScores(List<Double> originalList) {
-		List<Double> sortedList = new ArrayList<Double>();
-		sortedList.add(60.3);
-		for (Double d : originalList) {
-			for (int io = 0; io < originalList.size();) {
+		Collections.sort(originalList);
+		return originalList;
+	}
 
-				if (d > originalList.get(originalList.indexOf(d - 1))) {
-					io++;
-
-				} else {
-					break;
-				}
-			}
-		}
-	sortedList = originalList;
-	return sortedList;
+	public static List<String> sortDNA(List<String> lBS) {
+		ArrayList<Integer> sortThisList = new ArrayList<Integer>();
+		// for(String s: lBS){
+		// sortThisList.add(s.length());
+		// }
+Collections.sort(lBS);
+		return lBS;
 	}
 	// if(d < originalList.get(originalList.indexOf(d - 1)));
 
