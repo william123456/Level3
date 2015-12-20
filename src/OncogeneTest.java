@@ -21,7 +21,7 @@ public class OncogeneTest
 
 		ArrayList<String> cancerSequences = new ArrayList<String>();
 		for (char c : "ATTTGCAGG TGCAAATTA AAAGGGCCCTTT TGCGATACGTAGGACCA ACTCATTAGTGC AAACGCTAGACACACAAG".toCharArray())
-			cancerSequences.add("" + c);
+			cancerSequences.add("" + c); 
 
 		assertTrue(oncogeneDetector.isOncogene(healthySequences, cancerSequences, "TGC"));
 		assertFalse(oncogeneDetector.isOncogene(healthySequences, cancerSequences, "GGG"));
